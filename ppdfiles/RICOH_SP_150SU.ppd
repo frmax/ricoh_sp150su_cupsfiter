@@ -1,0 +1,537 @@
+*PPD-Adobe: "4.3"
+*FileVersion: "1.022"
+*FormatVersion: "4.3"
+*LanguageEncoding: ISOLatin1
+*LanguageVersion: English
+*Manufacturer: "RICOH"
+*PCFileName: "SP150SU.PPD"
+*Product: "(RICOH SP 150SU)"
+*PSVersion: "(3015.103) 1"
+*ShortNickName: "RICOH SP 150SU"
+*ModelName: "RICOH SP 150SU"
+*NickName: "RICOH SP 150SU v1.022"
+*cupsFilter:	"application/vnd.cups-raster 100 RICOH_SP_150SUFilter.app"
+*%APPrinterIconPath: "/Library/Printers/RICOH/Icons/RICOH SP 150SU.icns"
+*%APPrinterLowInkTool: "/Library/Printers/RICOH/Utility/TonerSupplyToolSP 150SU.app/Contents/MacOS/TonerSupplyToolSP 150SU"
+
+
+*% == Constraints (Page Size vs. Paper Type) ==
+*UIConstraints: *MediaType Plain *PageSize Env10
+*UIConstraints: *MediaType Plain *PageSize EnvMonarch
+*UIConstraints: *MediaType Plain *PageSize EnvC5
+*UIConstraints: *MediaType Plain *PageSize EnvDL
+*UIConstraints: *MediaType Plain-side2 *PageSize Env10
+*UIConstraints: *MediaType Plain-side2 *PageSize EnvMonarch
+*UIConstraints: *MediaType Plain-side2 *PageSize EnvC5
+*UIConstraints: *MediaType Plain-side2 *PageSize EnvDL
+*UIConstraints: *MediaType PlainThick *PageSize Env10
+*UIConstraints: *MediaType PlainThick *PageSize EnvMonarch
+*UIConstraints: *MediaType PlainThick *PageSize EnvC5
+*UIConstraints: *MediaType PlainThick *PageSize EnvDL
+*UIConstraints: *MediaType PlainThick-side2 *PageSize Env10
+*UIConstraints: *MediaType PlainThick-side2 *PageSize EnvMonarch
+*UIConstraints: *MediaType PlainThick-side2 *PageSize EnvC5
+*UIConstraints: *MediaType PlainThick-side2 *PageSize EnvDL
+*UIConstraints: *MediaType Recycled *PageSize Env10
+*UIConstraints: *MediaType Recycled *PageSize EnvMonarch
+*UIConstraints: *MediaType Recycled *PageSize EnvC5
+*UIConstraints: *MediaType Recycled *PageSize EnvDL
+*UIConstraints: *MediaType Recycled-side2 *PageSize Env10
+*UIConstraints: *MediaType Recycled-side2 *PageSize EnvMonarch
+*UIConstraints: *MediaType Recycled-side2 *PageSize EnvC5
+*UIConstraints: *MediaType Recycled-side2 *PageSize EnvDL
+*UIConstraints: *MediaType Label *PageSize Env10
+*UIConstraints: *MediaType Label *PageSize EnvMonarch
+*UIConstraints: *MediaType Label *PageSize EnvC5
+*UIConstraints: *MediaType Label *PageSize EnvDL
+*UIConstraints: *PageSize Env10 *MediaType Plain
+*UIConstraints: *PageSize EnvMonarch *MediaType Plain
+*UIConstraints: *PageSize EnvC5 *MediaType Plain
+*UIConstraints: *PageSize EnvDL *MediaType Plain
+*UIConstraints: *PageSize Env10 *MediaType Plain-side2
+*UIConstraints: *PageSize EnvMonarch *MediaType Plain-side2
+*UIConstraints: *PageSize EnvC5 *MediaType Plain-side2
+*UIConstraints: *PageSize EnvDL *MediaType Plain-side2
+*UIConstraints: *PageSize Env10 *MediaType PlainThick
+*UIConstraints: *PageSize EnvMonarch *MediaType PlainThick
+*UIConstraints: *PageSize EnvC5 *MediaType PlainThick
+*UIConstraints: *PageSize EnvDL *MediaType PlainThick
+*UIConstraints: *PageSize Env10 *MediaType PlainThick-side2
+*UIConstraints: *PageSize EnvMonarch *MediaType PlainThick-side2
+*UIConstraints: *PageSize EnvC5 *MediaType PlainThick-side2
+*UIConstraints: *PageSize EnvDL *MediaType PlainThick-side2
+*UIConstraints: *PageSize Env10 *MediaType Recycled
+*UIConstraints: *PageSize EnvMonarch *MediaType Recycled
+*UIConstraints: *PageSize EnvC5 *MediaType Recycled
+*UIConstraints: *PageSize EnvDL *MediaType Recycled
+*UIConstraints: *PageSize Env10 *MediaType Recycled-side2
+*UIConstraints: *PageSize EnvMonarch *MediaType Recycled-side2
+*UIConstraints: *PageSize EnvC5 *MediaType Recycled-side2
+*UIConstraints: *PageSize EnvDL *MediaType Recycled-side2
+*UIConstraints: *PageSize Env10 *MediaType Label
+*UIConstraints: *PageSize EnvMonarch *MediaType Label
+*UIConstraints: *PageSize EnvC5 *MediaType Label
+*UIConstraints: *PageSize EnvDL *MediaType Label
+
+*UIConstraints: *DrvDuplex DrvDuplexNoTumble *MediaType Label
+*UIConstraints: *DrvDuplex DrvDuplexTumble *MediaType Label
+*UIConstraints: *MediaType Label *DrvDuplex DrvDuplexNoTumble
+*UIConstraints: *MediaType Label *DrvDuplex DrvDuplexTumble
+
+*UIConstraints: *DrvDuplex DrvDuplexNoTumble *MediaType Envelope
+*UIConstraints: *DrvDuplex DrvDuplexTumble *MediaType Envelope
+*UIConstraints: *MediaType Envelope *DrvDuplex DrvDuplexNoTumble
+*UIConstraints: *MediaType Envelope *DrvDuplex DrvDuplexTumble
+
+*UIConstraints: *DrvDuplex DrvDuplexNoTumble *MediaType Plain-side2
+*UIConstraints: *DrvDuplex DrvDuplexTumble *MediaType Plain-side2
+*UIConstraints: *MediaType Plain-side2 *DrvDuplex DrvDuplexNoTumble
+*UIConstraints: *MediaType Plain-side2 *DrvDuplex DrvDuplexTumble
+
+
+*UIConstraints: *DrvDuplex DrvDuplexNoTumble *MediaType PlainThick-side2
+*UIConstraints: *DrvDuplex DrvDuplexTumble *MediaType PlainThick-side2
+*UIConstraints: *MediaType PlainThick-side2 *DrvDuplex DrvDuplexNoTumble
+*UIConstraints: *MediaType PlainThick-side2 *DrvDuplex DrvDuplexTumble
+
+*UIConstraints: *DrvDuplex DrvDuplexNoTumble *MediaType Covers-side2
+*UIConstraints: *DrvDuplex DrvDuplexTumble *MediaType Covers-side2
+*UIConstraints: *MediaType Covers-side2 *DrvDuplex DrvDuplexNoTumble
+*UIConstraints: *MediaType Covers-side2 *DrvDuplex DrvDuplexTumble
+
+*UIConstraints: *DrvDuplex DrvDuplexNoTumble *MediaType Coated-side2
+*UIConstraints: *DrvDuplex DrvDuplexTumble *MediaType Coated-side2
+*UIConstraints: *MediaType Coated-side2 *DrvDuplex DrvDuplexNoTumble
+*UIConstraints: *MediaType Coated-side2 *DrvDuplex DrvDuplexTumble
+
+*UIConstraints: *DrvDuplex DrvDuplexNoTumble *MediaType Recycled-side2
+*UIConstraints: *DrvDuplex DrvDuplexTumble *MediaType Recycled-side2
+*UIConstraints: *MediaType Recycled-side2 *DrvDuplex DrvDuplexNoTumble
+*UIConstraints: *MediaType Recycled-side2 *DrvDuplex DrvDuplexTumble
+
+*UIConstraints: *ImageType Photo *TonerMode 1
+*UIConstraints: *ImageType Photo *TonerMode 2
+*UIConstraints: *ImageType Photo *TonerMode 3
+
+*UIConstraints: *ImageType Graphics *TonerMode 1
+*UIConstraints: *ImageType Graphics *TonerMode 2
+*UIConstraints: *ImageType Graphics *TonerMode 3
+
+*UIConstraints: *ImageType WebPages *TonerMode 1
+*UIConstraints: *ImageType WebPages *TonerMode 2
+*UIConstraints: *ImageType WebPages *TonerMode 3
+
+*UIConstraints: *ImageType POP *TonerMode 1
+*UIConstraints: *ImageType POP *TonerMode 2
+*UIConstraints: *ImageType POP *TonerMode 3
+
+*UIConstraints: *DrvDuplex DrvDuplexNoTumble *RISaveBlankSheet True
+*UIConstraints: *DrvDuplex DrvDuplexTumble *RISaveBlankSheet True
+*UIConstraints: *RISaveBlankSheet True *DrvDuplex DrvDuplexNoTumble
+*UIConstraints: *RISaveBlankSheet True *DrvDuplex DrvDuplexTumble
+
+
+*UIConstraints: *TonerMode 1 *ImageType Photo
+*UIConstraints: *TonerMode 2 *ImageType Photo
+*UIConstraints: *TonerMode 3 *ImageType Photo
+
+*UIConstraints: *TonerMode 1 *ImageType Graphics
+*UIConstraints: *TonerMode 2 *ImageType Graphics
+*UIConstraints: *TonerMode 3 *ImageType Graphics
+
+*UIConstraints: *TonerMode 1 *ImageType WebPages
+*UIConstraints: *TonerMode 2 *ImageType WebPages
+*UIConstraints: *TonerMode 3 *ImageType WebPages
+
+*UIConstraints: *TonerMode 1 *ImageType POP
+*UIConstraints: *TonerMode 2 *ImageType POP
+*UIConstraints: *TonerMode 3 *ImageType POP
+
+*UIConstraints: *ColorModel Gray *IAM Complementary
+*UIConstraints: *IAM Complementary *ColorModel Gray
+
+
+
+
+*% ==== Device Capabilities ===============
+*LanguageLevel: "3"
+*Protocols: TBCP
+*1284Modes Parallel: Compat Nibble ECP
+*1284DeviceID: "MFG:RICOH;MDL:SP 150SU;DES:RICOH SP 150SU;CMD:GDI;CLS:PRINTER;"
+*End
+
+*ColorDevice:	False
+*DefaultColorSpace: Grayscale
+*VariablePaperSize: True
+*LandscapeOrientation: Plus90
+*TTRasterizer: Type42
+*?TTRasterizer: "
+save
+    42 /FontType resourcestatus
+    {pop pop (Type42)}{(No Type42)} ifelse = flush
+restore
+"
+*End
+*FileSystem: True
+*?FileSystem: "
+  save false
+   (%disk?%)
+   { currentdevparams dup /Writeable known
+      { /Writeable get {pop true} if }  { pop } ifelse
+    } 10 string /IODevice resourceforall
+    {(True)}{(False)} ifelse = flush
+ restore
+"
+*End
+
+*Throughput: "25"
+*Password: "()"
+*ExitServer: "
+ count 0 eq
+ { false } { true exch startjob } ifelse
+ not {
+     (WARNING: Cannot modify initial VM.) =
+     (Missing or invalid password.) =
+     (Please contact the author of this software.) = flush quit
+     } if
+"
+*End
+*Reset: "
+ count 0 eq
+ { false } { true exch startjob } ifelse
+ not {
+    (WARNING: Cannot reset printer.) =
+    (Missing or invalid password.) =
+    (Please contact the author of this software.) = flush quit
+    } if
+ systemdict /quit get exec
+ (WARNING : Printer Reset Failed.) = flush
+"
+*End
+
+*AccurateScreensSupport: True
+*SuggestedJobTimeout: "0"
+*SuggestedWaitTimeout: "300"
+*PrintPSErrors: True
+*APSupportsCustomColorMatching: true
+*APDefaultCustomColorMatchingProfile: sRGB
+*APCustomColorMatchingProfile: sRGB
+
+
+
+
+*% Paper Handling ===================
+*OpenUI *PageSize/Media Size: PickOne
+*OrderDependency: 11 AnySetup *PageSize
+*DefaultPageSize: Letter
+*PageSize Letter/US Letter: "<</PageSize[612 792]/ImagingBBox null>>setpagedevice"
+*PageSize A4/A4: "<</PageSize[595 842]/ImagingBBox null>>setpagedevice"
+*PageSize A5/A5: "<</PageSize[420 595]/ImagingBBox null>>setpagedevice"
+*PageSize A6/A6: "<</PageSize[297 420]/ImagingBBox null>>setpagedevice"
+*PageSize B5/JIS B5: "<</PageSize[516 729]/ImagingBBox null>>setpagedevice"
+*PageSize B6/JIS B6: "<</PageSize[363 516]/ImagingBBox null>>setpagedevice"
+*PageSize Executive/Executive: "<</PageSize[522 756]/ImagingBBox null>>setpagedevice"
+*PageSize 16K/16K: "<</PageSize[524 737]/ImagingBBox null>>setpagedevice"
+*PageSize A5LEF/A5(LEF): "<</PageSize[595 420]/ImagingBBox null>>setpagedevice"
+*PageSize B6LEF/JIS B6(LEF): "<</PageSize[516 363]/ImagingBBox null>>setpagedevice"
+*PageSize Legal/Legal: "<</PageSize [612 1008]/ImagingBBox null>>setpagedevice"
+*CloseUI: *PageSize
+*OpenUI *PageRegion/Media Size: PickOne
+*OrderDependency: 12 AnySetup *PageRegion
+*DefaultPageRegion: Letter
+*PageRegion Letter/US Letter: "<</PageSize[612 792]/ImagingBBox null>>setpagedevice"
+*PageRegion A4/A4: "<</PageSize[595 842]/ImagingBBox null>>setpagedevice"
+*PageRegion A5/A5: "<</PageSize[420 595]/ImagingBBox null>>setpagedevice"
+*PageRegion A6/A6: "<</PageSize[297 420]/ImagingBBox null>>setpagedevice"
+*PageRegion B5/JIS B5: "<</PageSize[516 729]/ImagingBBox null>>setpagedevice"
+*PageRegion B6/JIS B6: "<</PageSize[363 516]/ImagingBBox null>>setpagedevice"
+*PageRegion Executive/Executive: "<</PageSize[522 756]/ImagingBBox null>>setpagedevice"
+*PageRegion 16K/16K: "<</PageSize[524 737]/ImagingBBox null>>setpagedevice"
+*PageRegion A5LEF/A5(LEF): "<</PageSize[595 420]/ImagingBBox null>>setpagedevice"
+*PageRegion B6LEF/JIS B6(LEF): "<</PageSize[516 363]/ImagingBBox null>>setpagedevice"
+*PageRegion Legal/Legal: "<</PageSize [612 1008]/ImagingBBox null>>setpagedevice"
+*CloseUI: *PageRegion
+*DefaultImageableArea: Letter
+*ImageableArea Letter/US Letter: "11.905511856079 11.905511856079 600.094482421875 780.094482421875"
+*ImageableArea A4/A4: "11.905511856079 11.905511856079 583.094482421875 830.094482421875"
+*ImageableArea A5/A5: "11.905511856079 11.905511856079 408.094482421875 583.094482421875"
+*ImageableArea A6/A6: "11.905511856079 11.905511856079 285.094482421875 408.094482421875"
+*ImageableArea B5/JIS B5: "11.905511856079 11.905511856079 504.094482421875 717.094482421875"
+*ImageableArea B6/JIS B6: "11.905511856079 11.905511856079 351.094482421875 504.094482421875"
+*ImageableArea Executive/Executive: "11.905511856079 11.905511856079 510.094482421875 744.094482421875"
+*ImageableArea 16K/16K: "11.905511856079 11.905511856079 512.094482421875 725.094482421875"
+*ImageableArea A5LEF/A5(LEF): "11.905511856079 11.905511856079 583.094482421875 408.094482421875"
+*ImageableArea B6LEF/JIS B6(LEF): "11.905511856079 11.905511856079 504.094482421875 351.094482421875"
+*ImageableArea Legal/Legal: "11.905511856079 11.905511856079 600.094482421875 996.09448818898"
+*DefaultPaperDimension: Letter
+*PaperDimension Letter/US Letter: "612 792"
+*PaperDimension A4/A4: "595 842"
+*PaperDimension A5/A5: "420 595"
+*PaperDimension A6/A6: "297 420"
+*PaperDimension B5/JIS B5: "516 729"
+*PaperDimension B6/JIS B6: "363 516"
+*PaperDimension Executive/Executive: "522 756"
+*PaperDimension 16K/16K: "524 737"
+*PaperDimension A5LEF/A5(LEF): "595 420"
+*PaperDimension B6LEF/JIS B6(LEF): "516 363"
+*PaperDimension Legal/Legal: "612 1008"
+*MaxMediaWidth: "612.283508300781"
+*MaxMediaHeight: "1152"
+*HWMargins: 11.905511856079 11.905511856079 11.905511856079 11.905511856079
+*CustomPageSize True: "pop pop pop <</PageSize[5 -2 roll]/ImagingBBox null>>setpagedevice"
+*ParamCustomPageSize Width: 1 points 215.999 612.284
+*ParamCustomPageSize Height: 2 points 328.817 1008.001
+*ParamCustomPageSize WidthOffset: 3 points 0 0
+*ParamCustomPageSize HeightOffset: 4 points 0 0
+*ParamCustomPageSize Orientation: 5 int 0 0
+
+
+*LeadingEdge Short: ""
+*DefaultLeadingEdge: Short
+
+
+
+
+
+*OpenGroup: Graphics/Detailed Settings
+*% OutputMode Information ===================
+
+
+*AccurateScreensSupport: True
+*OpenUI *DrvResolution/Image Quality: PickOne
+*OrderDependency: 10 AnySetup *DrvResolution
+*DefaultDrvResolution: 600dpi
+*DrvResolution 600dpi/600DPI: "<</HWResolution [600 600]>>setpagedevice"
+*DrvResolution 1200dpi/1200DPI: "<</HWResolution [1200 600]>>setpagedevice"
+*CloseUI: *DrvResolution
+
+*AccurateScreensSupport: True
+*OpenUI *ColorModel/Output Color: PickOne
+*OrderDependency: 10 AnySetup *ColorModel
+*DefaultColorModel: Gray
+*ColorModel Gray/Black: "<</cupsBitsPerPixel 8/cupsBitsPerColor 8/cupsColorSpace 0/NegativePrint true>>setpagedevice"
+*CloseUI: *ColorModel
+
+
+
+*% Image Rotation ===============
+*OpenUI *ImageRotation/Image Rotation: Boolean
+*OrderDependency: 15.0 AnySetup *ImageRotation
+*DefaultImageRotation: False
+*ImageRotation False/Off: "<</ImageRotation false >>setpagedevice"
+*ImageRotation True/On: "<</ImageRotation true >>setpagedevice"
+*CloseUI: *ImageRotation
+*% Toner Mode ===============
+*OpenUI *TonerMode/Toner Saving Mode: PickOne
+*OrderDependency: 15.0 AnySetup *TonerMode
+*DefaultTonerMode: 0
+*TonerMode 1/On: "<</TonerMode>>setpagedevice"
+*TonerMode 0/Off: "<</TonerMode>>setpagedevice"
+*CloseUI: *TonerMode
+
+*ColorKeyWords: "StpBrightness"
+*OpenUI *StpBrightness/Brightness: PickOne
+*OrderDependency: 41.0 AnySetup *StpBrightness
+*DefaultStpBrightness: 200
+*StpBrightness 100/-100: "<</StpBrightness>>setpagedevice"
+*StpBrightness 120/-80: "<</StpBrightness>>setpagedevice"
+*StpBrightness 140/-60: "<</StpBrightness>>setpagedevice"
+*StpBrightness 160/-40: "<</StpBrightness>>setpagedevice"
+*StpBrightness 180/-20: "<</StpBrightness>>setpagedevice"
+*StpBrightness 200/0: "<</StpBrightness>>setpagedevice"
+*StpBrightness 220/20: "<</StpBrightness>>setpagedevice"
+*StpBrightness 240/40: "<</StpBrightness>>setpagedevice"
+*StpBrightness 260/60: "<</StpBrightness>>setpagedevice"
+*StpBrightness 280/80: "<</StpBrightness>>setpagedevice"
+*StpBrightness 300/100: "<</StpBrightness>>setpagedevice"
+*CloseUI: *StpBrightness
+*CloseGroup: Graphics
+
+
+
+*OpenGroup: ColorBalanceGroup/Color Balance
+
+
+*OpenUI *RIColorDensityBlackLow/Low Density (K): PickOne
+*OrderDependency: 50.0 AnySetup *RIColorDensityBlackLow
+*DefaultRIColorDensityBlackLow: 0
+*RIColorDensityBlackLow 3/Darker (+3): "/Black/Low 3/Custom/ProcSet"
+*RIColorDensityBlackLow 2/Darker (+2): "/Black/Low 2/Custom/ProcSet"
+*RIColorDensityBlackLow 1/Darker (+1): "/Black/Low 1/Custom/ProcSet"
+*RIColorDensityBlackLow 0/Normal (0): "/Black/Low 0/Custom/ProcSet"
+*RIColorDensityBlackLow -1/Lighter (-1): "/Black/Low -1/Custom/ProcSet"
+*RIColorDensityBlackLow -2/Lighter (-2): "/Black/Low -2/Custom/ProcSet"
+*RIColorDensityBlackLow -3/Lighter (-3): "/Black/Low -3/Custom/ProcSet"
+*CloseUI: *RIColorDensityBlackLow
+
+*OpenUI *RIColorDensityBlackMid/Medium Density (K): PickOne
+*OrderDependency: 51.0 AnySetup *RIColorDensityBlackMid
+*DefaultRIColorDensityBlackMid: 0
+*RIColorDensityBlackMid 3/Darker (+3): "/Black/Middle 3/Custom/ProcSet"
+*RIColorDensityBlackMid 2/Darker (+2): "/Black/Middle 2/Custom/ProcSet"
+*RIColorDensityBlackMid 1/Darker (+1): "/Black/Middle 1/Custom/ProcSet"
+*RIColorDensityBlackMid 0/Normal (0): "/Black/Middle 0/Custom/ProcSet"
+*RIColorDensityBlackMid -1/Lighter (-1): "/Black/Middle -1/Custom/ProcSet"
+*RIColorDensityBlackMid -2/Lighter (-2): "/Black/Middle -2/Custom/ProcSet"
+*RIColorDensityBlackMid -3/Lighter (-3): "/Black/Middle -3/Custom/ProcSet"
+*CloseUI: *RIColorDensityBlackMid
+
+*OpenUI *RIColorDensityBlackHigh/High Density (K): PickOne
+*OrderDependency: 52.0 AnySetup *RIColorDensityBlackHigh
+*DefaultRIColorDensityBlackHigh: 0
+*RIColorDensityBlackHigh 3/Darker (+3): "/Black/High 3/Custom/ProcSet"
+*RIColorDensityBlackHigh 2/Darker (+2): "/Black/High 2/Custom/ProcSet"
+*RIColorDensityBlackHigh 1/Darker (+1): "/Black/High 1/Custom/ProcSet"
+*RIColorDensityBlackHigh 0/Normal (0): "/Black/High 0/Custom/ProcSet"
+*RIColorDensityBlackHigh -1/Lighter (-1): "/Black/High -1/Custom/ProcSet"
+*RIColorDensityBlackHigh -2/Lighter (-2): "/Black/High -2/Custom/ProcSet"
+*RIColorDensityBlackHigh -3/Lighter (-3): "/Black/High -3/Custom/ProcSet"
+*CloseUI: *RIColorDensityBlackHigh
+*CloseGroup: ColorBalanceGroup
+
+*OpenGroup: AdvancedMedia/Paper Handling
+*% Collate ===============
+*OpenUI *Collate/Collated: Boolean
+*OrderDependency: 15.0 AnySetup *Collate
+*DefaultCollate: False
+*Collate False/Off: "<</Collate false >>setpagedevice"
+*Collate True/On: "<</Collate true >>setpagedevice"
+*CloseUI: *Collate
+
+
+*% MediaType ===============
+*OpenUI *MediaType/Paper Type: PickOne
+*OrderDependency: 13 AnySetup *MediaType
+*DefaultMediaType: Plain
+*MediaType Plain/Plain:	"<</MediaType(Plain)/cupsMediaType 0>>setpagedevice"
+*MediaType Recycled/Recycled:	"<</MediaType(Recycled)/cupsMediaType 1>>setpagedevice"
+*MediaType PlainThick/Plain Thick:	"<</MediaType(Plain Thick)/cupsMediaType 2>>setpagedevice"
+*MediaType PlainThin/Plain Thin: "<</MediaType(Plain Thin)/cupsMediaType 3>>setpagedevice"
+*MediaType Label/Label:	"<</MediaType(Label)/cupsMediaType 4>>setpagedevice"
+*CloseUI: *MediaType
+
+*OpenUI *DrvDuplex/Duplex: PickOne
+*OrderDependency: 31 AnySetup *DrvDuplex
+*DefaultDrvDuplex: None
+*DrvDuplex None/1 Sided Print: ""
+*DrvDuplex DrvDuplexNoTumble/Flip on Long Edge: "<</DrvDuplex true /Tumble false>>setpagedevice"
+*DrvDuplex DrvDuplexTumble/Flip on Short Edge: "<</DrvDuplex true /Tumble true>>setpagedevice"
+*CloseUI: *DrvDuplex
+
+
+*CloseGroup: AdvancedMedia
+
+*OpenGroup: PrinterFunction/Printer Specific Options
+*% Color Control ===============
+*OpenUI *RISaveBlankSheet/Skip Blank Pages: Boolean
+*OrderDependency: 40.0 AnySetup *RISaveBlankSheet
+*DefaultRISaveBlankSheet: False
+*RISaveBlankSheet False/Off: "<</RISaveBlankSheet false >>setpagedevice"
+*RISaveBlankSheet True/On: "<</RISaveBlankSheet true >>setpagedevice"
+*CloseUI: *RISaveBlankSheet
+*CloseGroup: PrinterFunction
+
+*% Input Sources (format: %%[ status: <stat>; source: <one of these> ]%% )
+*Source: "USB"
+*Source: "EtherTalk"
+
+
+
+*cupsLanguages: "ru"
+
+
+*% === RU ===
+
+*ru.Translation PageSize/Формат бумаги: ""
+*ru.PageSize A4/A4: ""
+*ru.PageSize A5/A5: ""
+*ru.PageSize A6/A6: ""
+*ru.PageSize B5/JIS B5: ""
+*ru.PageSize B6/JIS B6: ""
+*ru.PageSize Letter/US Letter: ""
+*ru.PageSize Executive/Executive: ""
+*ru.PageSize 16K/16K: ""
+
+
+*ru.Translation PageRegion/PageRegion: ""
+*ru.PageRegion A4/A4: ""
+*ru.PageRegion A5/A5: ""
+*ru.PageRegion A6/A6: ""
+*ru.PageRegion B5/JIS B5: ""
+*ru.PageRegion B6/JIS B6: ""
+*ru.PageRegion Letter/US Letter: ""
+*ru.PageRegion Executive/Executive: ""
+*ru.PageRegion 16K/16K: ""
+
+*ru.Translation Graphics/Подробные настройки: ""
+*ru.Translation ColorModel/Цвет отпечатка: ""
+*ru.ColorModel Gray/Черный: ""
+
+
+*ru.Translation DrvResolution/Качество изображения: ""
+*ru.DrvResolution 600dpi/600 т/д: ""
+*ru.DrvResolution 1200dpi/1200 т/д: ""
+
+*ru.Translation DrvDuplex/Двухсторонняя печать: ""
+*ru.DrvDuplex None/Односторонняя печать: ""
+*ru.DrvDuplex DrvDuplexNoTumble/Поворачивать по длинному краю: ""
+*ru.DrvDuplex DrvDuplexTumble/Поворачивать по короткому краю: ""
+
+
+*ru.Translation StpBrightness/Яркость: ""
+
+*ru.Translation TonerMode/Режим экономии тонера: ""
+*ru.TonerMode 0/Выкл.: ""
+*ru.TonerMode 1/Вкл.: ""
+
+
+*ru.Translation ImageRotation/Поворот изображения: ""
+*ru.ImageRotation False/Выкл.: ""
+*ru.ImageRotation True/Вкл.: ""
+
+
+*ru.Translation ColorBalanceGroup/Цветовой баланс: ""
+*ru.Translation RIColorDensityBlackLow/Низкая плотность (K): ""
+*ru.RIColorDensityBlackLow 3/Темнее (+3): ""
+*ru.RIColorDensityBlackLow 2/Темнее (+2): ""
+*ru.RIColorDensityBlackLow 1/Темнее (+1): ""
+*ru.RIColorDensityBlackLow 0/Стандартно (0): ""
+*ru.RIColorDensityBlackLow -1/Светлее (-1): ""
+*ru.RIColorDensityBlackLow -2/Светлее (-2): ""
+*ru.RIColorDensityBlackLow -3/Светлее (-3): ""
+*ru.Translation RIColorDensityBlackMid/Средняя плотность (K): ""
+*ru.RIColorDensityBlackMid 3/Темнее (+3): ""
+*ru.RIColorDensityBlackMid 2/Темнее (+2): ""
+*ru.RIColorDensityBlackMid 1/Темнее (+1): ""
+*ru.RIColorDensityBlackMid 0/Стандартно (0): ""
+*ru.RIColorDensityBlackMid -1/Светлее (-1): ""
+*ru.RIColorDensityBlackMid -2/Светлее (-2): ""
+*ru.RIColorDensityBlackMid -3/Светлее (-3): ""
+*ru.Translation RIColorDensityBlackHigh/Высокая плотность (K): ""
+*ru.RIColorDensityBlackHigh 3/Темнее (+3): ""
+*ru.RIColorDensityBlackHigh 2/Темнее (+2): ""
+*ru.RIColorDensityBlackHigh 1/Темнее (+1): ""
+*ru.RIColorDensityBlackHigh 0/Стандартно (0): ""
+*ru.RIColorDensityBlackHigh -1/Светлее (-1): ""
+*ru.RIColorDensityBlackHigh -2/Светлее (-2): ""
+*ru.RIColorDensityBlackHigh -3/Светлее (-3): ""
+
+*ru.Translation AdvancedMedia/Управление бумагой: ""
+*ru.Translation Collate/Разобрать по копиям: ""
+*ru.Collate False/Выкл.: ""
+*ru.Collate True/Вкл.: ""
+
+*ru.Translation MediaType/Тип бумаги: ""
+*ru.MediaType Plain/Обычная: ""
+*ru.MediaType PlainThick/Обычная толстая: ""
+*ru.MediaType PlainThin/Обычная тонкая: ""
+*ru.MediaType Label/Этикетка: ""
+*ru.MediaType Recycled/Переработанная: ""
+
+
+*ru.Translation PrinterFunction/Параметры принтера: ""
+*ru.Translation RISaveBlankSheet/Пропускать пустые страницы: ""
+*ru.RISaveBlankSheet False/Выкл.: ""
+*ru.RISaveBlankSheet True/Вкл.: ""
+
+

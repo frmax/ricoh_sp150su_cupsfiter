@@ -1,4 +1,4 @@
-AC_INIT([rastertosp150su], [0.1], [https://github.com/frmax/ricoh_sp150su_cupsfiter])
+AC_INIT([rastertosp150su], [0.2], [https://github.com/frmax/ricoh_sp150su_cupsfiter])
 AM_INIT_AUTOMAKE([-Wall -Werror foreign])
 AC_LANG([C])
 AC_PROG_CC

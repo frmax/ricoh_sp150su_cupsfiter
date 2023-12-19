@@ -12,6 +12,12 @@ cupsWidth cupsHeight - представляет размер той же стр�
 PageSize W = cupsWidth * 72 / HWResolution
 */
 
+/* TODO
+WARN    Размер "16K" должен быть в формате Adobe standard name "184.86x260mm".
+WARN    Размер "A5LEF" должен быть в формате Adobe standard name "A5Rotated".
+WARN    Размер "B6LEF" должен быть в формате Adobe standard name "B6Rotated".
+*/
+
 #include <config.h>
 #include <cupsfilters/driver.h>
 #include <ppd/ppd.h>
@@ -77,18 +83,34 @@ int PaperHeightMarginInPixel[12] = {
     0x0000 // Custom size
 };
 union uLPHL gdiStartPage, gdiEndPage;
-/*CMYK GRAY*/
-cf_cmyk_t *cmyk; // Color separation
-/*Dithering*/
-cf_lut_t *lut;       // Dither lookup table
-cf_dither_t *dither; // Dither state
-unsigned char *lineDither;
-const int nlutvals = 2; // Number of lookup values
-float lutvals[2] =      // Lookup values
+
+static unsigned char dither_noise[16][16] = // Blue-noise dither array
     {
-        0.0f, 1.0f};
-cf_logfunc_t logfunc = cfCUPSLogFunc; // Log function
-void *ld = NULL;                      // Log function data
+        {111, 49, 142, 162, 113, 195, 71, 177, 201, 50, 151, 94, 66, 37, 85, 252},
+        {25, 99, 239, 222, 32, 250, 148, 19, 38, 106, 220, 170, 194, 138, 13, 167},
+        {125, 178, 79, 15, 65, 173, 123, 87, 213, 131, 247, 23, 116, 54, 229, 212},
+        {41, 202, 152, 132, 189, 104, 53, 236, 161, 62, 1, 181, 77, 241, 147, 68},
+        {2, 244, 56, 91, 230, 5, 204, 28, 187, 101, 144, 206, 33, 92, 190, 107},
+        {223, 164, 114, 36, 214, 156, 139, 70, 245, 84, 226, 48, 126, 158, 17, 135},
+        {83, 196, 21, 254, 76, 45, 179, 115, 12, 40, 169, 105, 253, 176, 211, 59},
+        {100, 180, 145, 122, 172, 97, 235, 129, 215, 149, 199, 8, 72, 26, 238, 44},
+        {232, 31, 69, 11, 205, 58, 18, 193, 88, 60, 112, 221, 140, 86, 120, 153},
+        {208, 130, 243, 160, 224, 110, 34, 248, 165, 24, 234, 184, 52, 198, 171, 6},
+        {108, 188, 51, 89, 137, 186, 154, 78, 47, 134, 98, 157, 35, 249, 95, 63},
+        {16, 75, 219, 39, 0, 67, 228, 121, 197, 240, 3, 74, 127, 20, 227, 143},
+        {246, 175, 119, 200, 251, 103, 146, 14, 209, 174, 109, 218, 192, 82, 203, 163},
+        {29, 93, 150, 22, 166, 182, 55, 30, 90, 64, 42, 141, 168, 57, 117, 46},
+        {216, 233, 61, 128, 81, 237, 217, 118, 159, 255, 185, 27, 242, 102, 4, 133},
+        {73, 191, 9, 210, 43, 96, 7, 136, 231, 80, 10, 124, 225, 207, 155, 183}};
+
+// // Set dither arrays...
+// for (i = 0; i < 16; i ++)
+// {
+//     // Apply gamma correction to dither array...
+//     for (j = 0; j < 16; j ++)
+//     dither[i][j] = 255 - (int)(255.0 * pow(1.0 - dither_noise[i][j] / 255.0, 0.4545));
+// }
+// /mnt/disk/code/ricoh/pappl/pappl-1.4.x/pappl/job-filter.c
 
 //  **************************************** //
 // '*checkedmalloc()' - Helper for malloc .. //
@@ -335,34 +357,64 @@ void ProcessLine(cups_raster_t *ras, cups_page_header2_t *header, int nLine)
     {
         fputs("ERROR: Unable read raster data!\n", stderr);
     }
-    // fprintf(stderr, "DEBUG: Readd raster line %d\n", nLine);
+
+    // Кол-во полных байт занимаемых битами данных
+    unsigned int nLineInByte = (FWPaperWidthInPixel + 7) >> 3;
+    // Определяем указатель на выходные данные исходя из номера строки и кол-ва байт данных выходной строки
+    unsigned char *bitLine = bitBuffK + nLineInByte * nLine;
+    // Обнуляем значения выходной строки
+    memset(bitLine, 0, nLineInByte);
+    unsigned char *dither = dither_noise[nLine & 15];
     if (header->cupsBitsPerPixel == 8)
     {
-        // Дизериг. Из растра считывается точка в серых тонах и преобразуется в 1 битный цвет
-        unsigned char *bitLine = bitBuffK + ((FWPaperWidthInPixel + 7) >> 3) * nLine;
-        short *output = checkedmalloc(ret * 2); // short = byte * 2
-
-        // Преобразует вход в выход согласно таблицы соответсвия и кол-ва байтов(каналов) в цвете
-        cfCMYKDoGray(cmyk, lineBuff, output, ret);
-
-        // unsigned short *InputBuffer      = malloc(header->cupsWidth * 2);
-        // for (int i = 0; i < ((FWPaperWidthInPixel + 7) >> 3) * nLine; i++){
-        // InputBuffer[i] = lineBuff[i];
-        //}
-
-        // НЕ РАБОТАЕТ lineBuff требуется преобразовать в unsigned short*
-        cfDitherLine(dither, lut, output, 1, lineDither);
-
-        for (int i = 0; i < ret; i++)
+        unsigned char bit = 128, byte = 0;
+        if (header->cupsColorSpace == CUPS_CSPACE_K)
         {
-
-            if (lineDither[i] > 0)
+            // 8 bit black
+            for (int x = 0; x < header->cupsBytesPerLine; x++)
             {
-                bitLine[i / 7] |= (1 << (i % 7)) & 0xff;
-            }
-        }
+                if (lineBuff[x] >= dither[x & 15])
+                    byte |= bit;
 
-        free(output);
+                if (bit == 1)
+                {
+                    *bitLine++ = byte;
+                    byte = 0;
+                    bit = 128;
+                }
+                else
+                    bit /= 2;
+            }
+
+            if (bit < 128)
+                *bitLine = byte;
+        }
+        else
+        {
+            // 8 bit gray
+            for (int x = 0; x < header->cupsBytesPerLine; x++)
+            {
+                if (lineBuff[x] < dither[x & 15])
+                    byte |= bit;
+
+                if (bit == 1)
+                {
+                    *bitLine++ = byte;
+                    byte = 0;
+                    bit = 128;
+                }
+                else
+                    bit /= 2;
+            }
+
+            if (bit < 128)
+                *bitLine = byte;
+        }
+    }
+    else if (header->cupsBitsPerPixel == 1)
+    {
+        // 1-bit B&W
+        memcpy(bitLine, lineBuff, (header->cupsBytesPerLine + 7) >> 3);
     }
 }
 
@@ -791,14 +843,6 @@ main(int argc,     // I - Number of command-line arguments
         fprintf(stderr, "PAGE: %d 1\n", page);
         fprintf(stderr, "INFO: Starting page %d.\n", page);
 
-        /*CMYK Gray*/
-        cmyk = cfCMYKNew(1); //  for header.cupsBitsPerPixel == 8  num_channels = 1
-
-        /*Init dithering*/
-        lut = cfLutNew(nlutvals, lutvals, logfunc, ld);
-        dither = cfDitherNew(header.cupsBytesPerLine);
-        lineDither = (unsigned char *)checkedmalloc((size_t)(header.cupsBytesPerLine));
-
         for (y = 0; y < header.cupsHeight; y++)
         {
 
@@ -825,12 +869,6 @@ main(int argc,     // I - Number of command-line arguments
         PrintPageFile(&header);
 
         free(lineBuff);
-        /*Free CMYC Gray*/
-        cfCMYKDelete(cmyk);
-        /*Free dithering data*/
-        cfDitherDelete(dither);
-        cfLutDelete(lut);
-        free(lineDither);
 
         fprintf(stderr, "INFO: Finished page %d.\n", page);
 

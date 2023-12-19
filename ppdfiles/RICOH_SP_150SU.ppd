@@ -10,145 +10,21 @@
 *ShortNickName: "RICOH SP 150SU"
 *ModelName: "RICOH SP 150SU"
 *NickName: "RICOH SP 150SU v1.022"
-*cupsFilter:	"application/vnd.cups-raster 100 RICOH_SP_150SUFilter.app"
-*%APPrinterIconPath: "/Library/Printers/RICOH/Icons/RICOH SP 150SU.icns"
-*%APPrinterLowInkTool: "/Library/Printers/RICOH/Utility/TonerSupplyToolSP 150SU.app/Contents/MacOS/TonerSupplyToolSP 150SU"
+*cupsFilter:	"application/vnd.cups-raster 100 rastertosp150su"
 
 
 *% == Constraints (Page Size vs. Paper Type) ==
-*UIConstraints: *MediaType Plain *PageSize Env10
-*UIConstraints: *MediaType Plain *PageSize EnvMonarch
-*UIConstraints: *MediaType Plain *PageSize EnvC5
-*UIConstraints: *MediaType Plain *PageSize EnvDL
-*UIConstraints: *MediaType Plain-side2 *PageSize Env10
-*UIConstraints: *MediaType Plain-side2 *PageSize EnvMonarch
-*UIConstraints: *MediaType Plain-side2 *PageSize EnvC5
-*UIConstraints: *MediaType Plain-side2 *PageSize EnvDL
-*UIConstraints: *MediaType PlainThick *PageSize Env10
-*UIConstraints: *MediaType PlainThick *PageSize EnvMonarch
-*UIConstraints: *MediaType PlainThick *PageSize EnvC5
-*UIConstraints: *MediaType PlainThick *PageSize EnvDL
-*UIConstraints: *MediaType PlainThick-side2 *PageSize Env10
-*UIConstraints: *MediaType PlainThick-side2 *PageSize EnvMonarch
-*UIConstraints: *MediaType PlainThick-side2 *PageSize EnvC5
-*UIConstraints: *MediaType PlainThick-side2 *PageSize EnvDL
-*UIConstraints: *MediaType Recycled *PageSize Env10
-*UIConstraints: *MediaType Recycled *PageSize EnvMonarch
-*UIConstraints: *MediaType Recycled *PageSize EnvC5
-*UIConstraints: *MediaType Recycled *PageSize EnvDL
-*UIConstraints: *MediaType Recycled-side2 *PageSize Env10
-*UIConstraints: *MediaType Recycled-side2 *PageSize EnvMonarch
-*UIConstraints: *MediaType Recycled-side2 *PageSize EnvC5
-*UIConstraints: *MediaType Recycled-side2 *PageSize EnvDL
-*UIConstraints: *MediaType Label *PageSize Env10
-*UIConstraints: *MediaType Label *PageSize EnvMonarch
-*UIConstraints: *MediaType Label *PageSize EnvC5
-*UIConstraints: *MediaType Label *PageSize EnvDL
-*UIConstraints: *PageSize Env10 *MediaType Plain
-*UIConstraints: *PageSize EnvMonarch *MediaType Plain
-*UIConstraints: *PageSize EnvC5 *MediaType Plain
-*UIConstraints: *PageSize EnvDL *MediaType Plain
-*UIConstraints: *PageSize Env10 *MediaType Plain-side2
-*UIConstraints: *PageSize EnvMonarch *MediaType Plain-side2
-*UIConstraints: *PageSize EnvC5 *MediaType Plain-side2
-*UIConstraints: *PageSize EnvDL *MediaType Plain-side2
-*UIConstraints: *PageSize Env10 *MediaType PlainThick
-*UIConstraints: *PageSize EnvMonarch *MediaType PlainThick
-*UIConstraints: *PageSize EnvC5 *MediaType PlainThick
-*UIConstraints: *PageSize EnvDL *MediaType PlainThick
-*UIConstraints: *PageSize Env10 *MediaType PlainThick-side2
-*UIConstraints: *PageSize EnvMonarch *MediaType PlainThick-side2
-*UIConstraints: *PageSize EnvC5 *MediaType PlainThick-side2
-*UIConstraints: *PageSize EnvDL *MediaType PlainThick-side2
-*UIConstraints: *PageSize Env10 *MediaType Recycled
-*UIConstraints: *PageSize EnvMonarch *MediaType Recycled
-*UIConstraints: *PageSize EnvC5 *MediaType Recycled
-*UIConstraints: *PageSize EnvDL *MediaType Recycled
-*UIConstraints: *PageSize Env10 *MediaType Recycled-side2
-*UIConstraints: *PageSize EnvMonarch *MediaType Recycled-side2
-*UIConstraints: *PageSize EnvC5 *MediaType Recycled-side2
-*UIConstraints: *PageSize EnvDL *MediaType Recycled-side2
-*UIConstraints: *PageSize Env10 *MediaType Label
-*UIConstraints: *PageSize EnvMonarch *MediaType Label
-*UIConstraints: *PageSize EnvC5 *MediaType Label
-*UIConstraints: *PageSize EnvDL *MediaType Label
 
 *UIConstraints: *DrvDuplex DrvDuplexNoTumble *MediaType Label
 *UIConstraints: *DrvDuplex DrvDuplexTumble *MediaType Label
 *UIConstraints: *MediaType Label *DrvDuplex DrvDuplexNoTumble
 *UIConstraints: *MediaType Label *DrvDuplex DrvDuplexTumble
 
-*UIConstraints: *DrvDuplex DrvDuplexNoTumble *MediaType Envelope
-*UIConstraints: *DrvDuplex DrvDuplexTumble *MediaType Envelope
-*UIConstraints: *MediaType Envelope *DrvDuplex DrvDuplexNoTumble
-*UIConstraints: *MediaType Envelope *DrvDuplex DrvDuplexTumble
-
-*UIConstraints: *DrvDuplex DrvDuplexNoTumble *MediaType Plain-side2
-*UIConstraints: *DrvDuplex DrvDuplexTumble *MediaType Plain-side2
-*UIConstraints: *MediaType Plain-side2 *DrvDuplex DrvDuplexNoTumble
-*UIConstraints: *MediaType Plain-side2 *DrvDuplex DrvDuplexTumble
-
-
-*UIConstraints: *DrvDuplex DrvDuplexNoTumble *MediaType PlainThick-side2
-*UIConstraints: *DrvDuplex DrvDuplexTumble *MediaType PlainThick-side2
-*UIConstraints: *MediaType PlainThick-side2 *DrvDuplex DrvDuplexNoTumble
-*UIConstraints: *MediaType PlainThick-side2 *DrvDuplex DrvDuplexTumble
-
-*UIConstraints: *DrvDuplex DrvDuplexNoTumble *MediaType Covers-side2
-*UIConstraints: *DrvDuplex DrvDuplexTumble *MediaType Covers-side2
-*UIConstraints: *MediaType Covers-side2 *DrvDuplex DrvDuplexNoTumble
-*UIConstraints: *MediaType Covers-side2 *DrvDuplex DrvDuplexTumble
-
-*UIConstraints: *DrvDuplex DrvDuplexNoTumble *MediaType Coated-side2
-*UIConstraints: *DrvDuplex DrvDuplexTumble *MediaType Coated-side2
-*UIConstraints: *MediaType Coated-side2 *DrvDuplex DrvDuplexNoTumble
-*UIConstraints: *MediaType Coated-side2 *DrvDuplex DrvDuplexTumble
-
-*UIConstraints: *DrvDuplex DrvDuplexNoTumble *MediaType Recycled-side2
-*UIConstraints: *DrvDuplex DrvDuplexTumble *MediaType Recycled-side2
-*UIConstraints: *MediaType Recycled-side2 *DrvDuplex DrvDuplexNoTumble
-*UIConstraints: *MediaType Recycled-side2 *DrvDuplex DrvDuplexTumble
-
-*UIConstraints: *ImageType Photo *TonerMode 1
-*UIConstraints: *ImageType Photo *TonerMode 2
-*UIConstraints: *ImageType Photo *TonerMode 3
-
-*UIConstraints: *ImageType Graphics *TonerMode 1
-*UIConstraints: *ImageType Graphics *TonerMode 2
-*UIConstraints: *ImageType Graphics *TonerMode 3
-
-*UIConstraints: *ImageType WebPages *TonerMode 1
-*UIConstraints: *ImageType WebPages *TonerMode 2
-*UIConstraints: *ImageType WebPages *TonerMode 3
-
-*UIConstraints: *ImageType POP *TonerMode 1
-*UIConstraints: *ImageType POP *TonerMode 2
-*UIConstraints: *ImageType POP *TonerMode 3
 
 *UIConstraints: *DrvDuplex DrvDuplexNoTumble *RISaveBlankSheet True
 *UIConstraints: *DrvDuplex DrvDuplexTumble *RISaveBlankSheet True
 *UIConstraints: *RISaveBlankSheet True *DrvDuplex DrvDuplexNoTumble
 *UIConstraints: *RISaveBlankSheet True *DrvDuplex DrvDuplexTumble
-
-
-*UIConstraints: *TonerMode 1 *ImageType Photo
-*UIConstraints: *TonerMode 2 *ImageType Photo
-*UIConstraints: *TonerMode 3 *ImageType Photo
-
-*UIConstraints: *TonerMode 1 *ImageType Graphics
-*UIConstraints: *TonerMode 2 *ImageType Graphics
-*UIConstraints: *TonerMode 3 *ImageType Graphics
-
-*UIConstraints: *TonerMode 1 *ImageType WebPages
-*UIConstraints: *TonerMode 2 *ImageType WebPages
-*UIConstraints: *TonerMode 3 *ImageType WebPages
-
-*UIConstraints: *TonerMode 1 *ImageType POP
-*UIConstraints: *TonerMode 2 *ImageType POP
-*UIConstraints: *TonerMode 3 *ImageType POP
-
-*UIConstraints: *ColorModel Gray *IAM Complementary
-*UIConstraints: *IAM Complementary *ColorModel Gray
 
 
 
@@ -223,7 +99,7 @@ restore
 *% Paper Handling ===================
 *OpenUI *PageSize/Media Size: PickOne
 *OrderDependency: 11 AnySetup *PageSize
-*DefaultPageSize: Letter
+*DefaultPageSize: A4
 *PageSize Letter/US Letter: "<</PageSize[612 792]/ImagingBBox null>>setpagedevice"
 *PageSize A4/A4: "<</PageSize[595 842]/ImagingBBox null>>setpagedevice"
 *PageSize A5/A5: "<</PageSize[420 595]/ImagingBBox null>>setpagedevice"
@@ -238,7 +114,7 @@ restore
 *CloseUI: *PageSize
 *OpenUI *PageRegion/Media Size: PickOne
 *OrderDependency: 12 AnySetup *PageRegion
-*DefaultPageRegion: Letter
+*DefaultPageRegion: A4
 *PageRegion Letter/US Letter: "<</PageSize[612 792]/ImagingBBox null>>setpagedevice"
 *PageRegion A4/A4: "<</PageSize[595 842]/ImagingBBox null>>setpagedevice"
 *PageRegion A5/A5: "<</PageSize[420 595]/ImagingBBox null>>setpagedevice"
@@ -251,7 +127,7 @@ restore
 *PageRegion B6LEF/JIS B6(LEF): "<</PageSize[516 363]/ImagingBBox null>>setpagedevice"
 *PageRegion Legal/Legal: "<</PageSize [612 1008]/ImagingBBox null>>setpagedevice"
 *CloseUI: *PageRegion
-*DefaultImageableArea: Letter
+*DefaultImageableArea: A4
 *ImageableArea Letter/US Letter: "11.905511856079 11.905511856079 600.094482421875 780.094482421875"
 *ImageableArea A4/A4: "11.905511856079 11.905511856079 583.094482421875 830.094482421875"
 *ImageableArea A5/A5: "11.905511856079 11.905511856079 408.094482421875 583.094482421875"
@@ -263,7 +139,7 @@ restore
 *ImageableArea A5LEF/A5(LEF): "11.905511856079 11.905511856079 583.094482421875 408.094482421875"
 *ImageableArea B6LEF/JIS B6(LEF): "11.905511856079 11.905511856079 504.094482421875 351.094482421875"
 *ImageableArea Legal/Legal: "11.905511856079 11.905511856079 600.094482421875 996.09448818898"
-*DefaultPaperDimension: Letter
+*DefaultPaperDimension: A4
 *PaperDimension Letter/US Letter: "612 792"
 *PaperDimension A4/A4: "595 842"
 *PaperDimension A5/A5: "420 595"
